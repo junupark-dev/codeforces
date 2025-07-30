@@ -1,5 +1,5 @@
 make: main.cpp
-	g++ -g -std=c++20 main.cpp
+	g++ -g -std=c++20 -gdwarf-4 main.cpp
 test: make
 	./a.out < input > result
 	diff result output
