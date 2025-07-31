@@ -38,12 +38,8 @@ void solve() {
 	}
 	vector<int> v;
 	for (auto e : map) {
-		if (v.size() >= 4 && e.second >= 2) {
+		for (i = 0; i < e.second / 2; ++i) {
 			v.emplace_back(e.first);
-		} else {
-			for (i = 0; i < e.second / 2; ++i) {
-			v.emplace_back(e.first);
-			}
 		}
 	}
 	if (v.size() < 4) {
@@ -58,7 +54,7 @@ void solve() {
 	prev_min = v[1];
 	prev_max = v[v.size() - 2];
 
-	if ((max - min) * (prev_max - prev_min) > (max - prev_min) * (prev_max - min)) {
+	if ((ll)(max - min) * (ll)(prev_max - prev_min) > (ll)(max - prev_min) * (ll)(prev_max - min)) {
 		result(max, min, prev_max, prev_min);
 	} else {
 		result(max, prev_min, prev_max, min);
