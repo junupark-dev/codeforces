@@ -1,6 +1,2 @@
-b main.cpp:22 if t == 1
-b main.cpp:55
-r < input
-p t
-s
-n
+breakpoint set -f main.cpp -l 22 -c 't==1'
+process launch -i ./input

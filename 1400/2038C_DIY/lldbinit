@@ -1,2 +1,3 @@
+target create "./a.out"
 breakpoint set -f main.cpp -l 22 -c 't==1'
 process launch -i ./input
